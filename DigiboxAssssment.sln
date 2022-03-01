@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Digibox.Api", "Digibox.Api\Digibox.Api.csproj", "{AA7F2CFE-4A54-46A4-95AA-E4927DC3B8D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Digibox.Api", "Digibox.Api\Digibox.Api.csproj", "{AA7F2CFE-4A54-46A4-95AA-E4927DC3B8D2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8EB3A0CD-5068-45FC-9A8F-A908D5F05D93}"
 EndProject
@@ -18,13 +18,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{6041B6FA-24F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{8250818F-54E1-4E00-9EA7-8419423E200C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{53ECA77C-3AD0-42AA-A03D-C0B654AD79C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{53ECA77C-3AD0-42AA-A03D-C0B654AD79C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{0B1FF89B-8F01-46AD-B5D1-2A6655585B6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{0B1FF89B-8F01-46AD-B5D1-2A6655585B6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Customer", "Infrastructure.Customer\Infrastructure.Customer.csproj", "{423BF6C5-BFF2-4971-9531-F81A4829FC80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Customer", "Infrastructure.Customer\Infrastructure.Customer.csproj", "{423BF6C5-BFF2-4971-9531-F81A4829FC80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Persistence", "Infrastructure.Persistence\Infrastructure.Persistence.csproj", "{0FB7AC06-D6C7-47AE-A723-AB64A8228DAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Persistence", "Infrastructure.Persistence\Infrastructure.Persistence.csproj", "{0FB7AC06-D6C7-47AE-A723-AB64A8228DAA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{FA3DCE3C-913B-42FC-B0EC-2D9594FD79C4}"
 	ProjectSection(SolutionItems) = preProject
@@ -35,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{FA3DCE
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3BA06707-C994-4799-8F35-8F92AFDEF3FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiboxAssessment.Integration.Test", "DigiboxAssessment.Integration.Test\DigiboxAssessment.Integration.Test.csproj", "{DDCF2683-FFC5-4007-BFB7-7097E06A12A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +64,10 @@ Global
 		{0FB7AC06-D6C7-47AE-A723-AB64A8228DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FB7AC06-D6C7-47AE-A723-AB64A8228DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FB7AC06-D6C7-47AE-A723-AB64A8228DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDCF2683-FFC5-4007-BFB7-7097E06A12A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDCF2683-FFC5-4007-BFB7-7097E06A12A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDCF2683-FFC5-4007-BFB7-7097E06A12A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDCF2683-FFC5-4007-BFB7-7097E06A12A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,6 +82,7 @@ Global
 		{423BF6C5-BFF2-4971-9531-F81A4829FC80} = {8250818F-54E1-4E00-9EA7-8419423E200C}
 		{0FB7AC06-D6C7-47AE-A723-AB64A8228DAA} = {8250818F-54E1-4E00-9EA7-8419423E200C}
 		{3BA06707-C994-4799-8F35-8F92AFDEF3FC} = {8EB3A0CD-5068-45FC-9A8F-A908D5F05D93}
+		{DDCF2683-FFC5-4007-BFB7-7097E06A12A0} = {3BA06707-C994-4799-8F35-8F92AFDEF3FC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4F922424-9D44-42E0-BCF5-D09211B09822}
