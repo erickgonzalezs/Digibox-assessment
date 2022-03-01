@@ -1,5 +1,6 @@
 using System;
 using Application;
+using Infrastructure.Customer;
 using Infrastructure.Persistence;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -25,6 +26,7 @@ namespace Digibox.Api
       services.AddApplicationLayer();
       services.AddMediatR(typeof(Startup));
       services.AddPersistenceInfrastructure(Configuration);
+      services.AddCustomerInfrastructure(Configuration);
       services.AddSwaggerExtension();
       services.AddApiVersioningExtension();
       services.AddCorsExtension();

@@ -16,9 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CommandHandlers" />
-    <Folder Include="QueryHandlers" />
     <Folder Include="Services" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Application\Application.csproj" />
   </ItemGroup>
 
 </Project>
