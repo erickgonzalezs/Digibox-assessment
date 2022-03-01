@@ -1,0 +1,46 @@
+version: "3"
+
+services:
+  weborderapiqas:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=QAS
+    build:
+      context: .
+      dockerfile: WebOrder.Api/Dockerfile
+    volumes:
+      - '/etc/localtime:/etc/localtime:ro'
+      - '/etc/timezone:/etc/timezone:ro'
+      - './storage/keys:/root/.aspnet/DataProtection-Keys'
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.weborderapiqas.rule=Host(`dev.pedidoweb.radec.mx`)'
+      - 'traefik.http.routers.weborderapiqas.entrypoints=websecure'
+      - 'traefik.http.routers.weborderapiqas.tls.certresolver=myhttpchallenge'
+    networks:
+      - frontend
+      - backend
+
+  notificationsqas:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=QAS
+    build:
+      context: .
+      dockerfile: Notifications.Microservice/Dockerfile
+    volumes:
+      - '/etc/localtime:/etc/localtime:ro'
+      - '/etc/timezone:/etc/timezone:ro'
+      - './storage/keys:/root/.aspnet/DataProtection-Keys'
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.notificationsqas.rule=Host(`dev.notificaciones.radec.mx`)'
+      - 'traefik.http.routers.notificationsqas.entrypoints=websecure'
+      - 'traefik.http.routers.notificationsqas.tls.certresolver=myhttpchallenge'
+    networks:
+      - frontend
+      - backend
+
+networks:
+  frontend:
+    external: true
+  backend:
+    external: true
