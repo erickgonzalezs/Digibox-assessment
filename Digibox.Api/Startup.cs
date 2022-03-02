@@ -2,6 +2,7 @@ using System;
 using Application;
 using Infrastructure.Customer;
 using Infrastructure.Persistence;
+using Infrastructure.Persistence.Seeds;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -36,8 +37,10 @@ namespace Digibox.Api
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
       if (env.IsDevelopment())
+      {
         app.UseDeveloperExceptionPage();
-      //SeedManager.InitializeDatabase(app);          
+        if(Configuration.GetSection("SeedDb").Get<bool>()) SeedManager.InitializeDatabase(app, env);   
+      }
       app.UseRouting();
       app.UseCors("CorsPolicy");
       app.UseAuthorization();
