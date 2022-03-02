@@ -1,7 +1,13 @@
-﻿namespace DigiboxAssessment.Integration.Test.Persistence.Resources
+﻿using DigiboxAssessment.Integration.Test.Persistence.Seeds;
+using Infrastructure.Persistence.Contexts;
+
+namespace DigiboxAssessment.Integration.Test.Persistence.Resources
 {
-  public class DbInitializer
+  public static class DbInitializer
   {
-    
+    public static void Initialize(CustomersDbContext context)
+    {
+      CustomerSeed.Seed(context);
+    }
   }
 }
