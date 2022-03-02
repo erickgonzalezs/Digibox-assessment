@@ -20,4 +20,10 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Handlers\Fails" />
+    <Folder Include="Handlers\Success" />
+    <Folder Include="Mocks" />
+  </ItemGroup>
+
 </Project>
