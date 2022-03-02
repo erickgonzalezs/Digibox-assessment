@@ -58,8 +58,12 @@ namespace Digibox.Api.Controllers.v1
     public async Task<IActionResult> GetDigiBoxCustomerById(
       [FromRoute] string customerId)
     {
-      Response<CamposAdicionales> res= await Mediator.Send(new GetCustomerByIdQuery(customerId));
-      return Ok(res.Data);
+      Response<byte[]> r = await Mediator.Send(new GetCustomerByIdQuery(customerId));
+      var res = new FileContentResult(r.Data, "application/octet-stream")
+      {
+        FileDownloadName = $"{customerId}-interface.xml"
+      };
+      return res;
     }
     
   }
