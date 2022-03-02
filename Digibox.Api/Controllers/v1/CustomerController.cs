@@ -43,7 +43,7 @@ namespace Digibox.Api.Controllers.v1
     }
 
     /// <summary>
-    /// Get Customer List
+    /// Get Customer XML Detail Addenda
     /// </summary>
     /// <remarks>
     ///   Evaluation point:  3.	Create a third endpoint that receive the customerId as parameter and retrieve the information of the customer
