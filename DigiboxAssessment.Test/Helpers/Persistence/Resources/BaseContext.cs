@@ -1,9 +1,9 @@
 ﻿using System;
-using DigiboxAssessment.Integration.Test.Mocks;
+using DigiboxAssessment.Test.Helpers.Mocks;
 using Infrastructure.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 
-namespace DigiboxAssessment.Integration.Test.Persistence.Resources
+namespace DigiboxAssessment.Test.Helpers.Persistence.Resources
 {
   public class BaseContext: IDisposable
   {

@@ -1,7 +1,7 @@
-﻿using DigiboxAssessment.Integration.Test.Persistence.Seeds;
+﻿using DigiboxAssessment.Test.Helpers.Persistence.Seeds;
 using Infrastructure.Persistence.Contexts;
 
-namespace DigiboxAssessment.Integration.Test.Persistence.Resources
+namespace DigiboxAssessment.Test.Helpers.Persistence.Resources
 {
   public static class DbInitializer
   {

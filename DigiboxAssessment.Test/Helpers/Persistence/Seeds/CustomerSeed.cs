@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Domain.Entities;
 using Infrastructure.Persistence.Contexts;
 
-namespace DigiboxAssessment.Integration.Test.Persistence.Seeds
+namespace DigiboxAssessment.Test.Helpers.Persistence.Seeds
 {
   public static class CustomerSeed
   {

@@ -3,13 +3,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using Application.DTOs;
 using Application.Queries;
-using DigiboxAssessment.Integration.Test.Mocks;
+using DigiboxAssessment.Test.Helpers.Mocks;
 using FluentAssertions;
 using GoalIt.Core.Application.Wrappers;
 using Infrastructure.Customer.QueryHandlers;
+using Microsoft.AspNetCore.Mvc;
 using Xunit;
 
-namespace DigiboxAssessment.Integration.Test.Handlers.Success.Queries
+namespace DigiboxAssessment.Test.IntregationTest.Handlers.Success.Queries
 {
   public class CustomerQueryHandlersTest
   {
@@ -46,10 +47,16 @@ namespace DigiboxAssessment.Integration.Test.Handlers.Success.Queries
     {
       //Arrange
       CustomerMocks mocks = new();
+      var fileNameResult = $"{mocks.CustomerId01}-interface.xml";
       //Act
       await Get_Customer_ArrayByte_Addenda_ByCustomerID_Success();
+      var result = new FileContentResult(LocalData, "application/octet-stream")
+      {
+        FileDownloadName = fileNameResult
+      };
       //Assert
-      
+      result.FileDownloadName.Should().Be(fileNameResult);
+      result.ContentType.Should().Be("application/octet-stream");
     }
   }
 }

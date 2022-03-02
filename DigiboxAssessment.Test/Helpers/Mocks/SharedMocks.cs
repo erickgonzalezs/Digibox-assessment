@@ -1,9 +1,10 @@
 ﻿using Application.Mappings;
-using MediatR;
-using Moq;
 using AutoMapper;
 using AutoMapper.Configuration;
-namespace DigiboxAssessment.Integration.Test.Mocks
+using MediatR;
+using Moq;
+
+namespace DigiboxAssessment.Test.Helpers.Mocks
 {
   public class SharedMocks
   {

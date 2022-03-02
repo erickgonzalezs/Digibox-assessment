@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Xunit;
 
-namespace DigiboxAssessment.Integration.Test.Handlers.Success.Commands
+namespace DigiboxAssessment.Test.IntregationTest.Handlers.Success.Commands
 {
   public class CustomerCommandHandlersTest
   {

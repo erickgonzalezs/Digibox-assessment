@@ -37,7 +37,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{FA3DCE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3BA06707-C994-4799-8F35-8F92AFDEF3FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiboxAssessment.Integration.Test", "DigiboxAssessment.Integration.Test\DigiboxAssessment.Integration.Test.csproj", "{DDCF2683-FFC5-4007-BFB7-7097E06A12A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiboxAssessment.Test", "DigiboxAssessment.Test\DigiboxAssessment.Test.csproj", "{DDCF2683-FFC5-4007-BFB7-7097E06A12A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
