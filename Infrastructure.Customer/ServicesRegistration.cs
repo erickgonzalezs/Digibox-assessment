@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+using Application.Interfaces.Persistence;
 
 namespace Infrastructure.Customer
 {
@@ -10,6 +11,8 @@ namespace Infrastructure.Customer
     public static void AddCustomerInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
       services.AddMediatR(Assembly.GetExecutingAssembly());
+      services.AddTransient<ICustomerUnitOfWork, CustomerUnitOfWork>();
+      
     }
   }
 }

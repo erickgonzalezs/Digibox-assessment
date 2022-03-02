@@ -9,11 +9,11 @@ namespace Infrastructure.Customer.CommandHandlers
 {
   public class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerCommand, Response<string>>
   {
-    private readonly ICustomerRepositoryAsync _customerRepository;
+    private readonly ICustomerUnitOfWork _customerUnitOfWork;
 
-    public CreateCustomerCommandHandler(ICustomerRepositoryAsync customerRepository)
+    public CreateCustomerCommandHandler(ICustomerUnitOfWork customerRepository)
     {
-      _customerRepository = customerRepository;
+      _customerUnitOfWork = customerRepository;
     }
 
     public Task<Response<string>> Handle(CreateCustomerCommand request, CancellationToken cancellationToken)

@@ -9,9 +9,9 @@ namespace Infrastructure.Customer.QueryHandlers
 {
   public class GetCustomerByIdQueryHandler : IRequestHandler<GetCustomerByIdQuery, Response<string>>
   {
-    private readonly ICustomerRepositoryAsync _customerRepository;
+    private readonly ICustomerUnitOfWork _customerRepository;
 
-    public GetCustomerByIdQueryHandler(ICustomerRepositoryAsync customerRepository)
+    public GetCustomerByIdQueryHandler(ICustomerUnitOfWork customerRepository)
     {
       _customerRepository = customerRepository;
     }

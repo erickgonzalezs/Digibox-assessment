@@ -11,9 +11,9 @@ namespace Infrastructure.Customer.QueryHandlers
 {
   public class GetCustomerListQueryHandler : IRequestHandler<GetCustomerListQuery, Response<List<CustomerSimpleResDto>>>
   {
-    private readonly ICustomerRepositoryAsync _customerRepository;
+    private readonly ICustomerUnitOfWork _customerRepository;
 
-    public GetCustomerListQueryHandler(ICustomerRepositoryAsync customerRepository)
+    public GetCustomerListQueryHandler(ICustomerUnitOfWork customerRepository)
     {
       _customerRepository = customerRepository;
     }
