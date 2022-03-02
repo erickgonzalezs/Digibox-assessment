@@ -33,13 +33,11 @@ namespace Digibox.Api.Controllers.v1
     /// <remarks>
     ///   Evaluation point:  2.	Create a second endpoint to retrieve all the customers stored in the database.
     /// </remarks>
-    /// <param name="filter"></param>
     /// <returns></returns>
     [ApiVersion("1.0")]
     [ApiExplorerSettings(GroupName = "v1")]
     [HttpGet()]
-    public async Task<Response<List<CustomerSimpleResDto>>> GetDigiBoxCustomers(
-      [FromQuery] PaginatedFilteredReqDto filter)
+    public async Task<Response<List<CustomerSimpleResDto>>> GetDigiBoxCustomers()
     {
       return await Mediator.Send(new GetCustomerListQuery());
     }
@@ -57,10 +55,11 @@ namespace Digibox.Api.Controllers.v1
     [ApiVersion("1.0")]
     [ApiExplorerSettings(GroupName = "v1")]
     [HttpGet("{customerId}")]
-    public async Task<Response<List<CustomerSimpleResDto>>> GetDigiBoxCustomerById(
+    public async Task<IActionResult> GetDigiBoxCustomerById(
       [FromRoute] string customerId)
     {
-      return await Mediator.Send(new GetCustomerListQuery());
+      Response<CamposAdicionales> res= await Mediator.Send(new GetCustomerByIdQuery(customerId));
+      return Ok(res.Data);
     }
     
   }

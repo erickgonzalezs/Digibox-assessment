@@ -10,6 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{35B0DED4-BE93-44AF-B1C8-01049ADE5F95}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
+		camposadicionales.xsd = camposadicionales.xsd
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{11F77FB2-758C-4A97-A3B1-7584365D59FF}"

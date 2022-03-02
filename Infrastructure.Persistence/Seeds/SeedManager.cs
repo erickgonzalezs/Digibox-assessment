@@ -49,6 +49,7 @@ namespace Infrastructure.Persistence.Seeds
           },
         };
         await context.Customers.AddRangeAsync();
+        await context.SaveChangesAsync();
       }
     }
   }

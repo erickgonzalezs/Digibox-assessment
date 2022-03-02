@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Application.Queries
 {
-  public class GetCustomerByIdQuery : IRequest<Response<string>>
+  public class GetCustomerByIdQuery : IRequest<Response<CamposAdicionales>>
   {
     public GetCustomerByIdQuery(string customerId)
     {

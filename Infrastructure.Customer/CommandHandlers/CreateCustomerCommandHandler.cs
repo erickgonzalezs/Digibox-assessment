@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using System.Threading.Tasks;
 using Application.Command;
 using Application.Interfaces.Persistence;
@@ -26,6 +27,7 @@ namespace Infrastructure.Customer.CommandHandlers
       if (exist != null)
         throw new ApiException($"El Cliente con el ID {exist.Id} ya había sido registrado previamente");
       var entity = _customerUnitOfWork.Mapper.Map<CustomerEntity>(request.Payload);
+      entity.CreatedAt = DateTime.Now;
       await _customerUnitOfWork.CustomerRepositoryAsync.InsertOneAsync(entity);
       return new Response<string>($"Se ha registrado el cliente con el Id {entity.Id}", true);
     }
