@@ -25,8 +25,7 @@ namespace Digibox.Api
     {
       services.AddApplicationLayer();
       services.AddMediatR(typeof(Startup));
-      services.AddPersistenceInfrastructure(Configuration);
-      services.AddCustomerInfrastructure(Configuration);
+      services.AddRelatedInfrastructures(Configuration);
       services.AddSwaggerExtension();
       services.AddApiVersioningExtension();
       services.AddCorsExtension();
