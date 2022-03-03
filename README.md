@@ -57,19 +57,17 @@ Asegurarse de tener instalado "dotnet-ef" o ejecutar dotnet tool install --globa
 2. Correr Digibox.Api en ambiente de desarrollo.
 
 
-## Soporte para Docker
-#### Dev Env.:
+### Soporte para Docker
+#### QAS env:
+##### En el archivo docker-compose se encuentra todo lo necesario para levantar el container de la api y la BD de SQL para las correspondientes pruebas.
 1. Ejecutar:
-    - `docker-compose -f docker-compose.yml -f docker-compose.qas.override.yml up --remove-orphans --build -d`
-#### Production Env.:
-1. In the root folder run:
-    - `docker-compose -f docker-compose.yml -f docker-compose.prd.override.yml up --remove-orphans --build -d`
+    - `docker-compose -f docker-compose.qas.yml up --remove-orphans --build -d`
 
-## Swagger Documentación
-#### Dev Env.:
+### Swagger Documentación
 http://localhost:5010/swagger/index.html
 
+Nota importante: Todos los endpoint deberán recibir la versión "1" como parámetro. 
 
-## Datos del desarrollador:
-Erick González Sánchez
-
+### Datos del desarrollador a evaluar:
+#### Nombre: Erick González Sánchez
+#### Arquitecto de Desarrollo.

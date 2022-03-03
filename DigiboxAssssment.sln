@@ -49,6 +49,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{D10EA7
 		Images\IntegrationTest.png = Images\IntegrationTest.png
 		Images\PersistenceLayer.png = Images\PersistenceLayer.png
 		Images\TestLayer.png = Images\TestLayer.png
+		Images\swagger01.png = Images\swagger01.png
+		Images\swagger02.png = Images\swagger02.png
+		Images\swagger03.png = Images\swagger03.png
+		Images\swagger04.png = Images\swagger04.png
 	EndProjectSection
 EndProject
 Global
