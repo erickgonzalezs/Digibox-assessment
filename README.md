@@ -21,6 +21,25 @@ Esta desarrollada con .net 5 y cumple los estándares de WebApi Rest
 - [x] API Versioning
 - [x] Fluent Validation
 
+### Estructura del proyecto (clean architecture):
+![App01](https://raw.githubusercontent.com/erickgonzalezs/Digibox-assessment/main/Images/CleanArch01.png)
+#### Capa de Applicación:
+![App02](https://raw.githubusercontent.com/erickgonzalezs/Digibox-assessment/main/Images/AppLayer.png)
+#### Capa de Dominio:
+![App03](https://raw.githubusercontent.com/erickgonzalezs/Digibox-assessment/main/Images/DomainLayer.png)
+#### Capa de Infraestructura (Customer):
+![App04](https://raw.githubusercontent.com/erickgonzalezs/Digibox-assessment/main/Images/InfrastructureLayer.png)
+#### Capa de Infraestructura (Persistence):
+![App05](https://raw.githubusercontent.com/erickgonzalezs/Digibox-assessment/main/Images/PersistenceLayer.png)
+#### Api:
+![App06](https://raw.githubusercontent.com/erickgonzalezs/Digibox-assessment/main/Images/Api01.png)
+### Proyecto Test: 
+![Pruebas de integración IMG](https://raw.githubusercontent.com/erickgonzalezs/Digibox-assessment/main/Images/TestLayer.png)
+#### Evidencias de pruebas de integración: 
+![App07](https://raw.githubusercontent.com/erickgonzalezs/Digibox-assessment/main/Images/IntegrationTest.png)
+
+
+
 ## Release
 Pasos para utilizar el proyecto.
 1. Clonar el repositorio de la siguiente liga: https://github.com/erickgonzalezs/Digibox-assessment.
@@ -48,7 +67,7 @@ Asegurarse de tener instalado "dotnet-ef" o ejecutar dotnet tool install --globa
 
 ## Swagger Documentación
 #### Dev Env.:
-http://localhost:5008/swagger/index.html
+http://localhost:5010/swagger/index.html
 
 
 ## Datos del desarrollador:
