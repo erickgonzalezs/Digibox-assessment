@@ -34,7 +34,7 @@ namespace DigiboxAssessment.Test.IntregationTest.Handlers.Success.Queries
       //Arrange
       CustomerMocks mocks = new();
       GetCustomerByIdQuery query = new(mocks.CustomerId01);
-      GetCustomerByIdQueryHandler handler = new (mocks.UnitOfWork);
+      GetCustomerByIdQueryHandler handler = new (mocks.UnitOfWork, mocks.CustomerXmlService);
       //Act
       Response<byte[]> result = await handler.Handle(query, CancellationToken.None);
       LocalData = result.Data;

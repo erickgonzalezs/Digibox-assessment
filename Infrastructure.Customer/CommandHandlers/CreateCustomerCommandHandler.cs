@@ -23,6 +23,8 @@ namespace Infrastructure.Customer.CommandHandlers
 
     public async Task<Response<string>> Handle(CreateCustomerCommand request, CancellationToken cancellationToken)
     {
+      if (request.Payload.CustomerId == null) throw new ApiException($"En ID no puede ser NULL");
+      if (request.Payload.CustomerName == null) throw new ApiException($"El Name no puede ser NULL");
       CustomerEntity exist = await _customerUnitOfWork.CustomerRepositoryAsync.FindByIdAsync(request.Payload.CustomerId);
       if (exist != null)
         throw new ApiException($"El Cliente con el ID {exist.Id} ya había sido registrado previamente");

@@ -18,7 +18,7 @@ namespace DigiboxAssessment.Test.IntregationTest.Handlers.Fails.Queries
       //Arrange
       CustomerMocks mocks = new();
       GetCustomerByIdQuery query = new("incorrectId");
-      GetCustomerByIdQueryHandler handler = new (mocks.UnitOfWork);
+      GetCustomerByIdQueryHandler handler = new (mocks.UnitOfWork, mocks.CustomerXmlService);
       //Act
       Func<Task> act = async () => { await handler.Handle(query, CancellationToken.None); };
       //Assert
