@@ -66,7 +66,17 @@ Asegurarse de tener instalado "dotnet-ef" o ejecutar dotnet tool install --globa
 ### Swagger Documentación
 http://localhost:5010/swagger/index.html
 
-Nota importante: Todos los endpoint deberán recibir la versión "1" como parámetro. 
+Nota importante: Todos los endpoint deberán recibir la versión "1" como parámetro.
+![App07](https://raw.githubusercontent.com/erickgonzalezs/Digibox-assessment/main/Images/swagger01.png)
+
+Creación de customer.
+![App07](https://raw.githubusercontent.com/erickgonzalezs/Digibox-assessment/main/Images/swagger02.png)
+
+Listado de Customers.
+![App07](https://raw.githubusercontent.com/erickgonzalezs/Digibox-assessment/main/Images/swagger03.png)
+
+Obtener XML de addenda de Customer... Nota: El mismo Swagger mostrará la liga para la descarga del XML generado.
+![App07](https://raw.githubusercontent.com/erickgonzalezs/Digibox-assessment/main/Images/swagger04.png)
 
 ### Datos del desarrollador a evaluar:
 #### Nombre: Erick González Sánchez
