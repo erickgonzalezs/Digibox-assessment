@@ -23,9 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Helpers" />
     <Folder Include="IntregationTest" />
-    <Folder Include="UnitTest" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,5 +1,3 @@
-#See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
-
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
@@ -7,6 +5,10 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["Digibox.Api/Digibox.Api.csproj", "Digibox.Api/"]
+COPY ["Application/Application.csproj", "Application/"]
+COPY ["Domain/Domain.csproj", "Domain/"]
+COPY ["Infrastructure.Persistence/Infrastructure.Persistence.csproj", "Infrastructure.Persistence/"]
+COPY ["Infrastructure.Customer/Infrastructure.Customer.csproj", "Infrastructure.Customer/"]
 RUN dotnet restore "Digibox.Api/Digibox.Api.csproj"
 COPY . .
 WORKDIR "/src/Digibox.Api"

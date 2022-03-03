@@ -1,46 +1,33 @@
 version: "3"
 
 services:
-  weborderapiqas:
+  digiboxapi:
     environment:
-      - ASPNETCORE_ENVIRONMENT=QAS
+      - ASPNETCORE_ENVIRONMENT=Development
     build:
       context: .
-      dockerfile: WebOrder.Api/Dockerfile
+      dockerfile: Digibox.Api/Dockerfile
     volumes:
-      - '/etc/localtime:/etc/localtime:ro'
-      - '/etc/timezone:/etc/timezone:ro'
       - './storage/keys:/root/.aspnet/DataProtection-Keys'
-    labels:
-      - 'traefik.enable=true'
-      - 'traefik.http.routers.weborderapiqas.rule=Host(`dev.pedidoweb.radec.mx`)'
-      - 'traefik.http.routers.weborderapiqas.entrypoints=websecure'
-      - 'traefik.http.routers.weborderapiqas.tls.certresolver=myhttpchallenge'
     networks:
-      - frontend
       - backend
+    depends_on:
+      - sqlserver
 
-  notificationsqas:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2019-CU15-ubuntu-20.04
+    container_name: sqlserver2019
+    ports:
+      - 1433:1433
     environment:
-      - ASPNETCORE_ENVIRONMENT=QAS
-    build:
-      context: .
-      dockerfile: Notifications.Microservice/Dockerfile
+      ACCEPT_EULA: Y
+      SA_PASSWORD: PasswordO1.
+      MSSQL_PID: Express
     volumes:
-      - '/etc/localtime:/etc/localtime:ro'
-      - '/etc/timezone:/etc/timezone:ro'
-      - './storage/keys:/root/.aspnet/DataProtection-Keys'
-    labels:
-      - 'traefik.enable=true'
-      - 'traefik.http.routers.notificationsqas.rule=Host(`dev.notificaciones.radec.mx`)'
-      - 'traefik.http.routers.notificationsqas.entrypoints=websecure'
-      - 'traefik.http.routers.notificationsqas.tls.certresolver=myhttpchallenge'
+      - mssql_data:/var/opt/mssql
     networks:
-      - frontend
       - backend
 
 networks:
-  frontend:
-    external: true
   backend:
     external: true
