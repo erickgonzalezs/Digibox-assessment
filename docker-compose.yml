@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  digibox.api:
+    image: ${DOCKER_REGISTRY-}digiboxapi
+    build:
+      context: .
+      dockerfile: Digibox.Api/Dockerfile

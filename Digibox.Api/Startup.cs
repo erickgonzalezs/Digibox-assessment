@@ -1,7 +1,5 @@
 using System;
 using Application;
-using Infrastructure.Customer;
-using Infrastructure.Persistence;
 using Infrastructure.Persistence.Seeds;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -20,8 +18,6 @@ namespace Digibox.Api
     }
 
     public IConfiguration Configuration { get; }
-
-    // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddApplicationLayer();
@@ -32,8 +28,6 @@ namespace Digibox.Api
       services.AddCorsExtension();
       services.AddControllers();
     }
-
-    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
       if (env.IsDevelopment())

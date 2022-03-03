@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using Application.Command;
 using Application.DTOs;
 using Application.Queries;
-using GoalIt.Core.Application.DTOs;
 using GoalIt.Core.Application.Wrappers;
 using Microsoft.AspNetCore.Mvc;
 

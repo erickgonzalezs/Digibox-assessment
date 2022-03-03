@@ -3,6 +3,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using Application.Interfaces.Persistence;
+using Application.Interfaces.Services;
+using Infrastructure.Customer.Services;
 
 namespace Infrastructure.Customer
 {
@@ -12,7 +14,7 @@ namespace Infrastructure.Customer
     {
       services.AddMediatR(Assembly.GetExecutingAssembly());
       services.AddTransient<ICustomerUnitOfWork, CustomerUnitOfWork>();
-      
+      services.AddTransient<ICustomerXmlService, CustomerXmlService>();
     }
   }
 }

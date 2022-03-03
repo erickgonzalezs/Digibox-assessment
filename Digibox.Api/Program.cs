@@ -22,10 +22,6 @@ namespace Digibox.Api
       CreateHostBuilder(args)
         .Build()
         .Run();
-    
-
-
-
     }
 
     public static IConfiguration Configuration { get; } = new ConfigurationBuilder()

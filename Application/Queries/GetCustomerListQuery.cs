@@ -7,6 +7,5 @@ namespace Application.Queries
 {
   public class GetCustomerListQuery : IRequest<Response<List<CustomerSimpleResDto>>>
   {
-    
   }
 }

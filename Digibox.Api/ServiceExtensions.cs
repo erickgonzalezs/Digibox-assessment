@@ -64,7 +64,6 @@ namespace Digibox.Api
         c.ResolveConflictingActions(a => a.FirstOrDefault());
         var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
         string xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-        string extensionsFolder = Path.Combine(Directory.GetCurrentDirectory(), "Extensions", "Swagger");
         c.IncludeXmlComments(xmlPath);
       });
     }
