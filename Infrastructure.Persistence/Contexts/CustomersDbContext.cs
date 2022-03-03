@@ -16,7 +16,6 @@ namespace Infrastructure.Persistence.Contexts
     {
       base.OnModelCreating(builder);
       builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-
     }
   }
 }

@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8EB3A0CD-506
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{35B0DED4-BE93-44AF-B1C8-01049ADE5F95}"
 	ProjectSection(SolutionItems) = preProject
+		camposadicionales.xsd = camposadicionales.xsd
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -36,7 +37,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "config", "config", "{FA3DCE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{3BA06707-C994-4799-8F35-8F92AFDEF3FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigiboxAssessment.Integration.Test", "DigiboxAssessment.Integration.Test\DigiboxAssessment.Integration.Test.csproj", "{DDCF2683-FFC5-4007-BFB7-7097E06A12A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigiboxAssessment.Test", "DigiboxAssessment.Test\DigiboxAssessment.Test.csproj", "{DDCF2683-FFC5-4007-BFB7-7097E06A12A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{D10EA70B-D7A3-4F12-8762-754558EA7EA8}"
+	ProjectSection(SolutionItems) = preProject
+		Images\Api01.png = Images\Api01.png
+		Images\AppLayer.png = Images\AppLayer.png
+		Images\CleanArch01.png = Images\CleanArch01.png
+		Images\DomainLayer.png = Images\DomainLayer.png
+		Images\InfrastructureLayer.png = Images\InfrastructureLayer.png
+		Images\IntegrationTest.png = Images\IntegrationTest.png
+		Images\PersistenceLayer.png = Images\PersistenceLayer.png
+		Images\TestLayer.png = Images\TestLayer.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +96,7 @@ Global
 		{0FB7AC06-D6C7-47AE-A723-AB64A8228DAA} = {8250818F-54E1-4E00-9EA7-8419423E200C}
 		{3BA06707-C994-4799-8F35-8F92AFDEF3FC} = {8EB3A0CD-5068-45FC-9A8F-A908D5F05D93}
 		{DDCF2683-FFC5-4007-BFB7-7097E06A12A0} = {3BA06707-C994-4799-8F35-8F92AFDEF3FC}
+		{D10EA70B-D7A3-4F12-8762-754558EA7EA8} = {35B0DED4-BE93-44AF-B1C8-01049ADE5F95}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4F922424-9D44-42E0-BCF5-D09211B09822}

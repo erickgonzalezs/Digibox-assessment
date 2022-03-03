@@ -5,6 +5,5 @@ namespace Application.Interfaces.Persistence
 {
   public interface ICustomerRepositoryAsync : IGenericRepositoryAsync<CustomerEntity>
   {
-    
   }
 }
