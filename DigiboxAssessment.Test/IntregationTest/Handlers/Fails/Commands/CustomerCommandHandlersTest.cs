@@ -5,7 +5,6 @@ using Application.Command;
 using DigiboxAssessment.Test.Helpers.Mocks;
 using FluentAssertions;
 using GoalIt.Core.Application.Exceptions;
-using GoalIt.Core.Application.Wrappers;
 using Infrastructure.Customer.CommandHandlers;
 using Xunit;
 

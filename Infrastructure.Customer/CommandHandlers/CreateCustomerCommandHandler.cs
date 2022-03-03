@@ -3,7 +3,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using Application.Command;
 using Application.Interfaces.Persistence;
-using AutoMapper;
 using Domain.Entities;
 using GoalIt.Core.Application.Exceptions;
 using GoalIt.Core.Application.Wrappers;
@@ -14,8 +13,6 @@ namespace Infrastructure.Customer.CommandHandlers
   public class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerCommand, Response<string>>
   {
     private readonly ICustomerUnitOfWork _customerUnitOfWork;
-    
-
     public CreateCustomerCommandHandler(ICustomerUnitOfWork customerRepository)
     {
       _customerUnitOfWork = customerRepository;

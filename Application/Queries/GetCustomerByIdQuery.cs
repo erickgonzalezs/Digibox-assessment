@@ -9,7 +9,6 @@ namespace Application.Queries
     {
       CustomerId = customerId;
     }
-
     public string CustomerId { get; set; }
   }
 }

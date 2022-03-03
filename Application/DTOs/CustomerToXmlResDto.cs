@@ -1,6 +1,6 @@
 ﻿namespace Application.DTOs
 {
-  public class CustomerToXmlResDto
+  public record CustomerToXmlResDto
   {
     public string CustomerId { get; set; }
     public string CustomerName { get; set; }

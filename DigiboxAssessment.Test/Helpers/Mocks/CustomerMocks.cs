@@ -47,8 +47,6 @@ namespace DigiboxAssessment.Test.Helpers.Mocks
         CustomerName = "Customer Test",
         CustomerId = "CustomerId01"
       };
-
-
     }
   }
   

@@ -19,7 +19,6 @@ namespace Application.Validators
         .MinimumLength(4)
         .MaximumLength(100)
         .WithMessage("El valor del Nombre debe ser mínimo 4 caracteres y máximo 100");
-      
     }
   }
 }
